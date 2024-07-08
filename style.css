@@ -1,0 +1,418 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    background-color: rgb(0, 0, 0);
+    min-height: 100%;
+    width: 100%;
+    position: absolute;
+}
+body::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+    background: #99b4ff;
+    border-radius: 50px;
+  }
+body::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 50px;
+  }
+.nav{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    /* background-color: aqua; */
+    /* justify-content: space-between; */
+    z-index: 999;
+    position: fixed;
+    overflow: hidden;
+}
+.nav img{
+    height: 70px;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+.nav h4{
+    /* text-transform: uppercase; */
+    position: relative;
+    left: 10px;
+    margin-left: 50px;
+    margin-top: 40px;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+.cursor{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: rgba(130, 255, 207, 0.733);
+    position: fixed;
+}
+.cursor:hover h4{
+    background-color: transparent;
+    scale: 3;
+    transition-duration: 0.3s;
+}
+.cursor-blur{
+    height: 450px;
+    width: 450px;
+    border-radius: 50%;
+    filter: blur(60px);
+    background-color: rgba(15, 207, 255, 0.096);
+    position: fixed;
+}
+/* video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -99;
+    filter: blur(1.5px);
+} */
+.main{
+    position: relative;
+}
+.page-1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+
+.page-1 h1{
+    position: relative;
+    font-size: 7vw;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    -webkit-text-stroke: 1px solid white;
+}
+.page-1 h3{
+    font-size: 2vw;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 10px;
+}
+.page-1 p{
+    color: white;
+    /* font-family: "Montserrat", sans-serif;   */
+    margin-top: 10px;
+}
+.page-1 h1::before {
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    color: rgb(0, 0, 0);
+    z-index: -1;
+    -webkit-text-stroke: 1.5px #7dff9e;
+    top: -4px;
+    left: -4px;
+}
+
+.arrow{
+    height: 250px;
+    width: 250px;
+    background-color: transparent;
+    border: 2px solid rgb(12, 125, 255);
+    border-radius: 50%;
+    position: absolute;
+    left: -25px;
+    bottom: -20px;
+}
+.arrow:hover{
+    scale: 0.6;
+    background-color: #00cfc5;
+    border: none;
+    transition-duration: 0.3s;
+}
+.arrow i{
+    position: absolute;
+    bottom: 18vh;
+    left: 8.5vw;
+    color: white;
+    /* font-size: 40vh; */
+    align-items: center;
+}
+marquee{
+    position: relative;
+}
+marquee h4{
+    display: inline-block;
+    font-size: 20vh;
+    -webkit-text-stroke: 1px white;
+    margin-top: 10vh;
+}
+marquee h4:hover{
+    color: #00b652;
+    transition-duration: 0.3s;
+}
+.about-us{
+    height: 50vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    padding: 0 50px;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    justify-content: space-between;
+}
+.about-us img{
+    height: 30vh;
+    width: 20vw;
+    object-fit: cover;
+    text-align: center;
+    border-radius: 5%;
+    margin-top: 9vh;
+}
+.about-us-in { 
+    width: 50%;
+    text-align: center;
+} 
+.about-us-in h1{
+    color: white;
+    font-size: 60px;
+    margin-top: -10vh;
+    font-family: 'montserrat', sans-serif;
+}
+.about-us-in p{
+    color: white;
+    font-family: 'montserrat', sans-serif;
+    margin-top: 5vh;
+    font-size: 18px;
+}
+.cards-container{
+    /* background-color: aquamarine; */
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.card{
+    height: 80%;
+    width: 27%;
+    /* background-color: #ade70e; */
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+#card-1 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+#card-2 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4-1024x1024.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+#card-3 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #16c271a8;
+    border-radius: 10px;
+    /* padding: 30px; */
+    padding-top: 180px;
+    text-align: center;
+    opacity: 0;
+}
+.overlay h1{
+    color: black;
+    font-family: 'montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.overlay p{
+    font-family:  sans-serif;
+    margin-top: 10px;
+    font-size: 16px;
+}
+.card:hover .overlay{
+    opacity: 1;
+    transform: rotate3d(0,0,0,20deg);
+    transition-duration: 0.4s;
+}
+.card:hover .overlay h1{
+    transform: translateY(-70px);
+    transition-duration: 0.3s;
+}
+.card:hover .overlay p{
+    transform: translateY(-65px);
+    transition-duration: 0.3s;
+}
+.green{
+    height: 35vh;
+    width: 100%;
+    /* background-color: #ade70e; */
+    background: linear-gradient(rgb(0, 255, 98), rgb(22, 228, 114));
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 4px;
+}
+.green h4{
+    font-size: 25px;
+    margin-top: 7%;
+}
+.green img{
+    height: 85vh;
+}
+.quotes{
+    height: 80vh;
+    width: 100%;
+    justify-content: space-between;
+}
+.quotes h1{
+    color: white;
+    text-align: center;
+    margin-top: 150px;
+    font-family: 'montserrat', sans-serif;
+}
+.quotes img{
+    height: 8vh;
+    position: relative;
+}
+.quotes .colon1{
+    top: 20vh;
+    left: 8vw;
+}
+.quotes .colon2{
+    left: 86.5vw;
+}
+.offer h1{
+    -webkit-text-stroke: 1px  white;
+    font-family: 'montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 65px;
+    margin-left: 10%;
+}
+.offer .box{
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+}
+.offer .box h2{
+    position: relative;
+    top: 8vh;
+    left: 2.5vw;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    font-family: 'montserrat',sans-serif;
+}
+.offer #box-1{
+    height: 21vh;
+    width: 22vw;
+    background-color: #00a156;
+    position: relative;
+    margin-left: 12vw;
+    margin-top: -5vh;
+    overflow: hidden;
+}
+.offer #box-1 img{
+    border-radius: 15px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all ease 0.5s;
+    opacity: 0;
+}
+.offer #box-1:hover img{
+    opacity: 1;
+    scale: 0.9;
+}
+.offer #box-1:hover h2{
+    color: white;
+}
+.offer #box-1:hover{
+    background-color: transparent;
+}
+.offer #box-2{
+    height: 21vh;
+    width: 22vw;
+    background-color: #00a156;
+    position: relative;
+    margin-left: 37vw;
+    margin-top: -21vh;
+}
+.offer #box-2 img{
+    border-radius: 15px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all ease 0.5s;
+    opacity: 0;
+}
+.offer #box-2:hover img{
+    opacity: 1;
+    scale: 0.9;
+}
+.offer #box-2:hover{
+    background-color: transparent;
+}
+.offer #box-2:hover h2{
+    color: white;
+}
+.offer #box-3{
+    height: 21vh;
+    width: 22vw;
+    background-color: #00a156;
+    position: relative;
+    margin-left: 62vw;
+    margin-top: -21vh;
+}
+.offer #box-3 img{
+    border-radius: 15px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all ease 0.5s;
+    opacity: 0;
+}
+.offer #box-3:hover img{
+    opacity: 1;
+    scale: 0.9;
+}
+.offer #box-3:hover h2{
+    color: white;
+}
+.offer #box-3:hover{
+    background-color: transparent;
+}
+.footer{
+    height: 45vh;
+    width: 100%;
+    background: linear-gradient(rgb(7, 218, 154),rgba(0, 115, 209, 0.719));
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+}
+.footer .img-1{
+    height: 40vh;
+    margin-right: -15vw;
+}
+.footer .img-2{
+    height: 15vh;
+}
+.footer ul li{
+    list-style-type: none;
+    font-size: 23px;
+    /* font-family: 'montserrat',sans-serif; */
+    margin-top: 4px;
+    margin-left: 8vw;
+    font-weight: 600;
+}
+.footer .ul-2 li{
+    list-style-type: none;
+    font-size: 15px;
+}
